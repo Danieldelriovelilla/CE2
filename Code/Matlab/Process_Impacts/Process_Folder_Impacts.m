@@ -15,9 +15,10 @@ close all
 %% VARIABLES DEFFINITION
 
 % Folders
-raw_path = 'D:\DMPA\Impactor\Impacts\Stiffened\Raw_Impact\m-160\20211103/';
-xy_path = 'D:\DMPA\Impactor\Impacts\Stiffened\Processed\m-160\XY_20211103\';
-report_path = 'D:\DMPA\Impactor\Impacts\Stiffened\Processed\m-160\Report_20211103\';
+raw_path = 'E:\DMPA_Dani\m-160\19800106_2144\19800106_2144/';
+report_path = 'E:\DMPA_Dani\m-160\19800106_2144\Report\';
+xy_path = 'E:\DMPA_Dani\m-160\19800106_2144\XY\';
+
 
 
 % Impact retain samples
@@ -48,7 +49,7 @@ for f = 1:Nf
     
     
     % Check if the impact has been shorted
-    if length( impact.data ) <= 10000
+    if length( impact.data ) <= idx_end
         error_report(idx_e).File = files(f).name;
         error_report(idx_e).Error = 'Not enough data';
         idx_e = idx_e + 1;
@@ -77,11 +78,9 @@ for f = 1:Nf
         coord{idx_cat,1} = [num2str(impact.x), ' - ', num2str(impact.y)];
         idx_cat = idx_cat + 1;
         
-        disp( ['Impact: ' num2str(f) ' of ' num2str(Nf)] )
-
     end
     
-
+    disp( ['Impact: ' num2str(f) ' of ' num2str(Nf)] )
 end
 disp( 'END OF PROCESSING LOOP' )
 

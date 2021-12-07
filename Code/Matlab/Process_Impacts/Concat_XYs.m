@@ -1,6 +1,6 @@
 %% DESCRIPTION
 %{
-%-   Process_Folder_Impacts.m   -%
+%-   Concat_XYs.m   -%
 
 This code opens all impact.mat files and short them to a certain length. 
 After that, all of this files are saved on the respective processed folder.
