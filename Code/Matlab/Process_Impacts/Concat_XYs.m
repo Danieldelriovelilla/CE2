@@ -14,15 +14,31 @@ close all
 
 %% DATA EXTRACTION
 
-inidvidual_paths = {'D:\DMPA\Impactor\Impacts\Stiffened\Processed\m-060\XY_20211028\';
-         'D:\DMPA\Impactor\Impacts\Stiffened\Processed\m-110\XY_20211102\';
-         'D:\DMPA\Impactor\Impacts\Stiffened\Processed\m-160\XY_20211103\'};
-concatenated_path = 'C:\Users\danie\OneDrive - Universidad PolitÃ©cnica de Madrid\MUSE\S3\CE2\Code\Python\Data\';
+concatenated_path = 'C:\Users\Usuario\OneDrive - Universidad Politécnica de Madrid\MUSE\S3\CE2\Code\Python\Data\';
+folder = dir(concatenated_path);
+
+if any(strcmp({folder(:).name}, 'X.mat'))
+    % Load XY
+  disp('X matrix already exists.');
+  load([concatenated_path 'X.mat'])
+  Y = readtable( [concatenated_path 'Y.csv']);
+else
+    % XY initialization
+    X = [];
+    Y = struct2table(...
+        struct('x', [], 'y', [], 'mass', [], 'height', [], 'energy', []) );
+end
+
+inidvidual_paths = {'E:\DMPA_Dani\m-060\19800102_0257\Processed\XY\';
+         'E:\DMPA_Dani\m-060\20211104_1151\Processed\XY\';
+         'E:\DMPA_Dani\m-110\19800104_2005\XY\';
+         'E:\DMPA_Dani\m-160\19800106_2144\XY\';
+         'E:\DMPA_Dani\m-210\19800101_0011\XY\';
+         'E:\DMPA_Dani\m-260\19800101_0011\XY\';
+         'E:\DMPA_Dani\m-260\19800103_2144\XY\'};
+
      
-% Array initialization     
-X = [];
-Y = struct2table(...
-    struct('x', [], 'y', [], 'mass', [], 'height', [], 'energy', []) );
+%%
 
 for p = 1:numel(inidvidual_paths)
     

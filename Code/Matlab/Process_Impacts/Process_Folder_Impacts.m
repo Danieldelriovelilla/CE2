@@ -15,9 +15,9 @@ close all
 %% VARIABLES DEFFINITION
 
 % Folders
-raw_path = 'E:\DMPA_Dani\m-160\19800106_2144\19800106_2144/';
-report_path = 'E:\DMPA_Dani\m-160\19800106_2144\Report\';
-xy_path = 'E:\DMPA_Dani\m-160\19800106_2144\XY\';
+raw_path = 'E:\DMPA_Dani\m-260\19800103_2144\19800103_2144/';
+report_path = 'E:\DMPA_Dani\m-260\19800103_2144\Report\';
+xy_path = 'E:\DMPA_Dani\m-260\19800103_2144\XY\';
 
 
 
