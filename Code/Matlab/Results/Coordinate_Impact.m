@@ -48,36 +48,43 @@ for i = 1:15
     end
 end
 
-
+%%
+figure(1)
+h = heatmap(rand(3,3));
+h.XLabel = '$u_1$';
+h.YLabel = '$u_2$';
+h.Title = '$x^y$';
+h.NodeChildren(3).XAxis.Label.Interpreter = 'latex';
+h.NodeChildren(3).YAxis.Label.Interpreter = 'latex';
+h.NodeChildren(3).Title.Interpreter = 'latex';
 
 %%
-mycolormap = customcolormap([0 0.5 1], [1 1 1; 1 0 0; 0 0 0]);
+close all
+mycolormap = customcolormap([0 0.5 1], [242,223,208; 224,46,82 ; 38,23,54]/255);
 
-figure()
-    
-    hm = heatmap(mean_a', 'Colormap', mycolormap);
+h = figure();
+    hm = heatmap(mean_a', 'FontName', 'Times New Roman');
+%     hm.NodeChildren(3).XAxis.Label.Interpreter = 'latex';
+%     hm.NodeChildren(3).YAxis.Label.Interpreter = 'latex';
+%     hm.NodeChildren(3).Title.Interpreter = 'latex';
     hm.NodeChildren(3).YDir='normal';
     hGrid.ColorData = uint8([238;238;238;125]);
-    plot([0,0], [0, 17], 'w')
-    plot([1,1], [0, 17], 'w')
+    colormap(mycolormap)
+    title('MEAN')
+    xlabel('X')
+    ylabel('Y')
+Save_Heatmap_As('png', h, 'Figures/mean_a');    
+
 figure()
-hm = heatmap(var_a', 'Colormap', winter);
-hm.NodeChildren(3).YDir='normal';
+    hm = heatmap(var_a', 'FontName', 'Times New Roman', 'Colormap', mycolormap);
+    hm.NodeChildren(3).YDir='normal';
+    title('Variance')
 
 
-%%
-figure()
-    hold on
-    imagesc(mean_a')
-    colormap(mycolormap);
-    colorbar
-    plot([-0.5,-.5], [-0.5, 17.5], 'w')
-    plot([.5,.5], [.5, 17.5], 'w')
-    plot([1.5,1.5], [-0.5, 17.5], 'w')
-    plot([2.5,2.5], [-0.5, 17.5], 'w')
+
 %% 
-Plot_Impact_Location(70, targ, pred)
-
+h = Plot_Impact_Location(70, targ, pred);
+Save_Heatmap_As('pdf', h, 'Figures/Impact');
 
 
 
@@ -120,20 +127,20 @@ save(strcat(folder, '\','Combination_IDX.dat'),...
 end
 
 
-function [] = Plot_Impact_Location(idx, targ, pred)
+function [h] = Plot_Impact_Location(idx, targ, pred)
 xx = linspace(0, 630, 15);
 yy = linspace(0, 710, 17);
 [xx, yy] = meshgrid(xx, yy);
 zz = 0*xx;
-figure()
-    mesh(xx', yy', zz', 'EdgeAlpha', '0.5', 'EdgeColor', [0,0,0]);
+h = figure();
+    mesh(xx', yy', zz', 'EdgeAlpha', '1', 'EdgeColor', [0,0,0], 'LineWidth', 0.05);
     xlabel('X [mm]')
     ylabel('Y [mm]')
-    grid off; box on
+    grid off; box on;
     view([0, 90])
     axis('equal')
-    xlim([0 630])
-    ylim([0 710])
+    xlim([-30 660])
+    ylim([-30 740])
     
     hold on
     scatter(targ(idx, 1), targ(idx, 2), 100, 'fill')
