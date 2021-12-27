@@ -20,9 +20,9 @@ end
 mean_x = zeros(15, 17);
 mean_y = zeros(15, 17);
 mean_a = zeros(15, 17);
-var_x = zeros(15, 17);
-var_y = zeros(15, 17);
-var_a = zeros(15, 17);
+sig_x = zeros(15, 17);
+sig_y = zeros(15, 17);
+sig_a = zeros(15, 17);
 
 c = 0;
 for i = 1:15
@@ -30,13 +30,13 @@ for i = 1:15
         c = c + 1;
         idx = comb(c).idx;
         % Error X
-        ex = targ(idx, 1) - pred(idx, 1);
+        ex = abs( targ(idx, 1) - pred(idx, 1) );
         mean_x(i, j) = mean(ex);
-        var_x(i, j) = var(ex);
+        sig_x(i, j) = sqrt(var(ex));
         % Error Y
-        ey = targ(idx, 2) - pred(idx, 2);
+        ey = abs( targ(idx, 2) - pred(idx, 2) );
         mean_y(i, j) = mean(ey);
-        var_y(i, j) = var(ey);
+        sig_y(i, j) = sqrt(var(ey));
         % Error Y
         ea_euc = [targ(idx, 1) - pred(idx, 1), targ(idx, 2) - pred(idx, 2)];
         ea = [];
@@ -44,47 +44,47 @@ for i = 1:15
                 ea =  cat(1, ea, sqrt(norm(ea_euc(k,:))));
             end
         mean_a(i, j) = mean(ea);
-        var_a(i, j) = var(ea);
+        sig_a(i, j) = sqrt(var(ea));
     end
 end
 
-%%
-figure(1)
-h = heatmap(rand(3,3));
-h.XLabel = '$u_1$';
-h.YLabel = '$u_2$';
-h.Title = '$x^y$';
-h.NodeChildren(3).XAxis.Label.Interpreter = 'latex';
-h.NodeChildren(3).YAxis.Label.Interpreter = 'latex';
-h.NodeChildren(3).Title.Interpreter = 'latex';
 
-%%
-close all
-mycolormap = customcolormap([0 0.5 1], [242,223,208; 224,46,82 ; 38,23,54]/255);
+%% PLOT AND SAVE HEATMAPS
 
-h = figure();
-    hm = heatmap(mean_a', 'FontName', 'Times New Roman');
-%     hm.NodeChildren(3).XAxis.Label.Interpreter = 'latex';
-%     hm.NodeChildren(3).YAxis.Label.Interpreter = 'latex';
-%     hm.NodeChildren(3).Title.Interpreter = 'latex';
-    hm.NodeChildren(3).YDir='normal';
-    hGrid.ColorData = uint8([238;238;238;125]);
-    colormap(mycolormap)
-    title('MEAN')
-    xlabel('X')
-    ylabel('Y')
-Save_Heatmap_As('png', h, 'Figures/mean_a');    
+% Labels
+x = table2cell(array2table((linspace(0, 630, 15))));
+y = table2cell(array2table((linspace(0, 710, 17))));
+% Custom colormap setup
+mycolormap = customcolormap([0, 0.25 0.5, 0.75, 1],... 
+    [5,6,24; 118,36,94; 205,33,81; 233,109,73; 254,234,219]/255);
 
-figure()
-    hm = heatmap(var_a', 'FontName', 'Times New Roman', 'Colormap', mycolormap);
-    hm.NodeChildren(3).YDir='normal';
-    title('Variance')
+% X
+h = Plot_Heatmap(x, y, mean_x, 'MEDIA (\mu) [mm]', mycolormap);
+Save_Heatmap_As('pdf', h, 'Figures/Mean_x');    
+% Save_Heatmap_As('svg', h, 'Figures/Mean_x');   
+h = Plot_Heatmap(x, y, sig_x, 'DESVIACION TIPICA (\sigma) [mm]', mycolormap);
+Save_Heatmap_As('pdf', h, 'Figures/Variance_x'); 
+% Save_Heatmap_As('svg', h, 'Figures/Variance_x'); 
+% Y
+h = Plot_Heatmap(x, y, mean_y, 'MEDIA (\mu) [mm]', mycolormap);
+Save_Heatmap_As('pdf', h, 'Figures/Mean_y');    
+% Save_Heatmap_As('svg', h, 'Figures/Mean_y');   
+h = Plot_Heatmap(x, y, sig_y, 'DESVIACION TIPICA (\sigma) [mm]', mycolormap);
+Save_Heatmap_As('pdf', h, 'Figures/Variance_y'); 
+% Save_Heatmap_As('svg', h, 'Figures/Variance_y'); 
+% Absolute
+h = Plot_Heatmap(x, y, mean_a, 'MEDIA (\mu) [mm]', mycolormap);
+Save_Heatmap_As('pdf', h, 'Figures/Mean_a');    
+% Save_Heatmap_As('svg', h, 'Figures/Mean_a');   
+h = Plot_Heatmap(x, y, sig_a, 'DESVIACION TIPICA (\sigma) [mm]', mycolormap);
+Save_Heatmap_As('pdf', h, 'Figures/Variance_a'); 
+% Save_Heatmap_As('svg', h, 'Figures/Variance_a'); 
+    
 
-
-
-%% 
-h = Plot_Impact_Location(70, targ, pred);
+%% PLOT AND SAVE AN IMPACT
+h = Plot_Impact_Location(1, targ, pred);
 Save_Heatmap_As('pdf', h, 'Figures/Impact');
+Save_Heatmap_As('svg', h, 'Figures/Impact');
 
 
 
@@ -94,7 +94,6 @@ Save_Heatmap_As('pdf', h, 'Figures/Impact');
 %% FUNCTIONS
 
 function [comb, idx] = Find_Combinations(X)
-
 x = categorical(X(:,1));
 xcat = categories(x);
 y = categorical(X(:,2));
@@ -116,16 +115,26 @@ for i = 1:length(xcat)
         comb(c).idx = idx;
     end 
 end
-
-% SAVE COMBINATION CATEGORIES & IDX
-%{
-save(strcat(folder, '\','Combination_XY.dat'),...
-    'comb','-ascii','-double','-tabs');
-save(strcat(folder, '\','Combination_IDX.dat'),...
-    'idx','-ascii','-double','-tabs');
-%}
 end
 
+function [h] = Plot_Heatmap(x, y, z, tit, cm)
+h = figure();
+    hm = heatmap(x, y, z', 'FontName', 'Times New Roman');
+%     hm.NodeChildren(3).XAxis.Label.Interpreter = 'latex';
+%     hm.NodeChildren(3).YAxis.Label.Interpreter = 'latex';
+%     hm.NodeChildren(3).Title.Interpreter = 'latex';
+    hm.NodeChildren(3).XAxis.TickLabelRotation = -45;
+    hm.NodeChildren(3).YAxis.TickLabelRotation = -0;
+    hm.NodeChildren(3).YDir='normal';
+    hHeatmap = struct(hm).Heatmap;
+    hGrid = struct(hHeatmap).Grid;
+    hGrid.ColorData = uint8([255;255;255;255]);
+    colormap(cm)
+    title(tit)
+    xlabel('X')
+    ylabel('Y')
+    
+end
 
 function [h] = Plot_Impact_Location(idx, targ, pred)
 xx = linspace(0, 630, 15);
@@ -134,8 +143,11 @@ yy = linspace(0, 710, 17);
 zz = 0*xx;
 h = figure();
     mesh(xx', yy', zz', 'EdgeAlpha', '1', 'EdgeColor', [0,0,0], 'LineWidth', 0.05);
-    xlabel('X [mm]')
-    ylabel('Y [mm]')
+    title(strcat('Target:$\;$', num2str(targ(idx, 1)), '$\,$-$\,$', num2str(targ(idx, 2)),...
+        '$\;$ Prediction:$\;$', num2str(pred(idx, 1)), '$\,$-$\,$', num2str(pred(idx, 2))),...
+        'Interpreter', 'Latex')
+    xlabel('X [mm]','Interpreter', 'Latex')
+    ylabel('Y [mm]', 'Interpreter', 'Latex')
     grid off; box on;
     view([0, 90])
     axis('equal')
@@ -146,3 +158,4 @@ h = figure();
     scatter(targ(idx, 1), targ(idx, 2), 100, 'fill')
     scatter(pred(idx, 1), pred(idx, 2), 100, 'x', 'LineWidth', 2)
 end
+
