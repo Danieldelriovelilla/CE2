@@ -85,19 +85,21 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
+Este trabajo consiste en constrtuir una herramienta de Structural Health Monitoring, (SHM), con dos objetivos principales: localización y caracterización energética de imapctos.
+
+La herramienta utilizada se ha desarrollado en Python utilizadno la librería PyTorch. Sin embargo, todo el procesado de datos se ha realizado mediante software en MATLAB. 
 
 
-### Built With
+### Folder organization
 
+* [asdf](asdfasdf)
 * []()
 * []()
-* []()
 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
