@@ -127,12 +127,23 @@ Esta carpeta contiene los códigos utilizados para procesar los impactos y obten
   Pruebas para hacer reducción dimensional con los impactos.
 
 
+### [Python](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab)
+Esta carpeta contiene el desarrollo del modelo de Deep Learning con PyTorch.
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* [DL](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Python/DL) 
+  
+  Pruebas de reducción dimensional y extracción de características.
+* [Data_Preparation_4_ML](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Python/Data_Preparation_4_ML)
+
+  Pruebas de diferentes algoritmos de preparación de datos para Machine Learning.
+* [Impacts_Code_Developpement](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Python/Impacts_Code_Developpment)
+
+  Pruebas de redes en local.
+  
+  
+
+
+
 
 ### Installation
 
