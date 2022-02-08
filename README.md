@@ -94,7 +94,7 @@ La herramienta utilizada se ha desarrollado en Python utilizadno la librería Py
 
 ### Folder organization
 
-* [asdf](asdfasdf)
+* asdfasdf
 * []()
 * []()
 
