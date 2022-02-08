@@ -114,6 +114,7 @@ En esta carpeta se encuentra el software desarollado. Se divide en dos subcarpet
 Esta carpeta contiene los códigos utilizados para procesar los impactos y obtener los resultados del funcionamiento de la herramienta.
 
 * [Impact_Config](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab/Impact_Config) 
+  
   Código de reducción dimensional.
 * [Process_Impacts](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab/Process_Impacts)
 * [Results](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab/Results)
