@@ -94,7 +94,7 @@ La herramienta utilizada se ha desarrollado en Python utilizadno la librería Py
 
 ### Folder organization
 
-* [https://github.com/Danieldelriovelilla/CE2/Code](Code)
+* [Code](https://github.com/Danieldelriovelilla/CE2/Code)
 * []()
 * []()
 
