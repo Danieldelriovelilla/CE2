@@ -40,18 +40,17 @@
 
   <p align="center">
   En este repositorio se reocge todo el desarrollo de la asignatura Caso de Estudio 2 del Máster Universitario en Sistemas Espaciales (Instituto de Investigación Ignacio da Riva, Universidad Politécnica de Madrid).
-  
+  <br />
+    <a href="https://github.com/Danieldelriovelilla/CE2"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/Danieldelriovelilla/CE2.git"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/Danieldelriovelilla/CE2.git">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/Danieldelriovelilla/CE2/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/Danieldelriovelilla/CE2/issues">Request Feature</a>
   </p>
-</p>
+</div>
 
 
 
