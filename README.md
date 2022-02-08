@@ -94,11 +94,14 @@ La herramienta utilizada se ha desarrollado en Python utilizadno la librería Py
 
 ### Folder organization
 
+La estructura de carpetas en la que se divide el repositorio es la siguiente, que se detallará una por una más adelante.
+
 * [Code](https://github.com/Danieldelriovelilla/CE2/tree/main/Code)
 * [Documentation](https://github.com/Danieldelriovelilla/CE2/tree/main/Documentation)
 * [Presentation](https://github.com/Danieldelriovelilla/CE2/tree/main/Presentacion)
 * [Readme_Folder](https://github.com/Danieldelriovelilla/CE2/tree/main/Readme_Folder)
 * [Report](https://github.com/Danieldelriovelilla/CE2/tree/main/Report)
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
