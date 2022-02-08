@@ -71,12 +71,9 @@
         <li><a href="#Python">Python</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#Presentacion">Presentacion</a></li>
+    <li><a href="#Report">Report</a></li>
+    <li><a href="#Agradecimientos">Agradecimientos</a></li>
   </ol>
 </details>
 
@@ -105,10 +102,12 @@ La estructura de carpetas en la que se divide el repositorio es la siguiente, qu
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+
 <!-- CODE -->
 ## [Code](https://github.com/Danieldelriovelilla/CE2/tree/main/Code)
 
 En esta carpeta se encuentra el software desarollado. Se divide en dos subcarpetas, Matlab y Python, ya que el trabajo se han utilizado ambos lenguajes.
+
 
 ### [Matlab](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab)
 Esta carpeta contiene los códigos utilizados para procesar los impactos y obtener los resultados del funcionamiento de la herramienta.
@@ -149,74 +148,18 @@ Los modelos finales utilizados se pueden encontrar en la siguiente carpeta compa
 
 
 
+<!-- Presentacion -->
+## [Presentacion](https://github.com/Danieldelriovelilla/CE2/tree/main/Presentacion)
 
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
+Ppt realizada para la presentación del trabajo. Aquí se encuentran las fotos y vídeos que se han utlizado.
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- Presentacion -->
+## Agradecimientos
+Especial agradecimiento a:
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
+* [Andrés Pedraza](https://github.com/temisAP)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
