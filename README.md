@@ -47,7 +47,7 @@
   <p align="center">
   Para realizar este trabajo se han procesado los datos mediante programas desarrollados en MATLAB y todo el desarrollo de Deep Learning se ha hecho en Python con PyTorch.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Danieldelriovelilla/CE2.git"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
