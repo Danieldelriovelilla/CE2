@@ -33,7 +33,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Danieldelriovelilla/CE2.git">
-    <img src="Readme_Folder/Postprocessed_Impact.pdf" alt="Logo" width="80" height="80">
+    <img src="Readme_Folder/Postprocessed_Impact.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Caso de Estudio 2</h3>
