@@ -83,7 +83,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Sobre el proyecto
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
@@ -92,7 +92,7 @@ Este trabajo consiste en constrtuir una herramienta de Structural Health Monitor
 La herramienta utilizada se ha desarrollado en Python utilizadno la librería PyTorch. Sin embargo, todo el procesado de datos se ha realizado mediante software en MATLAB. 
 
 
-### Folder organization
+### Organización de carpetas
 
 La estructura de carpetas en la que se divide el repositorio es la siguiente, que se detallará una por una más adelante.
 
@@ -105,12 +105,20 @@ La estructura de carpetas en la que se divide el repositorio es la siguiente, qu
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<!-- GETTING STARTED -->
+<!-- CODE -->
 ## [Code](https://github.com/Danieldelriovelilla/CE2/tree/main/Code)
 
-To get a local copy up and running follow these simple steps.
+En esta carpeta se encuentra el software desarollado. Se divide en dos subcarpetas, Matlab y Python, ya que el trabajo se han utilizado ambos lenguajes.
 
-### Prerequisites
+### [Matlab](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab)
+Esta carpeta contiene los códigos utilizados para procesar los impactos y obtener los resultados del funcionamiento de la herramienta.
+
+* [Impact_Config](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab/Impact_Config) 
+* [Process_Impacts](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab/Process_Impacts)
+* [Results](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab/Results)
+* [t-SNE](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab/t-SNE)
+
+
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
