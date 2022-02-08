@@ -38,12 +38,12 @@
 
   <h3 align="center">Caso de Estudio 2</h3>
 
-  <p align="center">
+  <p align="center"
     En este repositorio se reocge todo el desarrollo de la asignatura Caso de Estudio 2 del Máster Universitario en Sistemas        Espaciales (Instituto de Investigación Ignacio da Riva, Universidad Politécnica de Madrid).
   
   El objetivo principal de este trabajo es construir una herramienta de localización y caracterización energética de impactos mediante Redes Neuronales.  
   
-  Para realizar este trabajo se han procesado los datos mediante programas desarrollados en MATLAB y todo el desarrollo de Deep Learning se ha hecho en Python con PyTorch.
+  Para realizar este trabajo se han procesado los datos mediante programas desarrollados en MATLAB y todo el desarrollo de Deep Learning se ha hecho en Python con PyTorch.>
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
