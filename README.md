@@ -5,7 +5,7 @@
 *** Thanks again! Now go create something AMAZING! :D
 ***
 ***
-***
+***Cancel changes
 *** To avoid retyping too much info. Do a search and replace for the following:
 *** github_username, repo_name, twitter_handle, email, project_title, project_description
 -->
@@ -32,8 +32,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Danieldelriovelilla/CE2.git">
+    <img src="Readme_Folder/Postprocessed_Impact.pdf" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Caso de Estudio 2</h3>
