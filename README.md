@@ -140,7 +140,12 @@ Esta carpeta contiene el desarrollo del modelo de Deep Learning con PyTorch.
 
   Pruebas de redes en local.
   
+Los modelos finales utilizados se pueden encontrar en la siguiente carpeta compartida de Drive.
+```sh
+  https://drive.google.com/drive/folders/1yNxO625r8JCTOUuzdgK5sJzlRZNtvN7R?usp=sharing
+```
   
+<p align="right">(<a href="#top">back to top</a>)</p>  
 
 
 
