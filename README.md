@@ -117,8 +117,14 @@ Esta carpeta contiene los códigos utilizados para procesar los impactos y obten
   
   Código de reducción dimensional.
 * [Process_Impacts](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab/Process_Impacts)
+
+  Programas para procesar los impactos y juntarlos un una única matriz
 * [Results](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab/Results)
+
+  Programas para obtener los resultados del funcionamiento de las redes desarrolladas.
 * [t-SNE](https://github.com/Danieldelriovelilla/CE2/tree/main/Code/Matlab/t-SNE)
+
+  Pruebas para hacer reducción dimensional con los impactos.
 
 
 
