@@ -102,13 +102,11 @@ La estructura de carpetas en la que se divide el repositorio es la siguiente, qu
 * [Readme_Folder](https://github.com/Danieldelriovelilla/CE2/tree/main/Readme_Folder)
 * [Report](https://github.com/Danieldelriovelilla/CE2/tree/main/Report)
 
-
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## [Code](https://github.com/Danieldelriovelilla/CE2/tree/main/Code)
 
 To get a local copy up and running follow these simple steps.
 
