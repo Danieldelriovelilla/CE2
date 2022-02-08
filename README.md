@@ -71,6 +71,7 @@
         <li><a href="#Python">Python</a></li>
       </ul>
     </li>
+    <li><a href="#Documentation">Documentation</a></li>
     <li><a href="#Presentacion">Presentacion</a></li>
     <li><a href="#Report">Report</a></li>
     <li><a href="#Agradecimientos">Agradecimientos</a></li>
@@ -148,14 +149,26 @@ Los modelos finales utilizados se pueden encontrar en la siguiente carpeta compa
 
 
 
+<!-- Documentation -->
+## [Documentation](https://github.com/Danieldelriovelilla/CE2/tree/main/Documentation)
+Todos los libros y artículos que se han utilizado en el trabajo.
+
+
+
 <!-- Presentacion -->
 ## [Presentacion](https://github.com/Danieldelriovelilla/CE2/tree/main/Presentacion)
-
 Ppt realizada para la presentación del trabajo. Aquí se encuentran las fotos y vídeos que se han utlizado.
 
 
 
-<!-- Presentacion -->
+<!-- Report -->
+## [Report](https://github.com/Danieldelriovelilla/CE2/tree/main/Report)
+Informe escrito y todas las imágenes tuilizadas.
+
+
+
+
+<!-- Agradecimientos -->
 ## Agradecimientos
 Especial agradecimiento a:
 
